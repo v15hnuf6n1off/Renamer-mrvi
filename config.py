@@ -10,7 +10,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
 FORCE_SUB = os.environ.get("FORCE_SUB", "") 
 
-DB_NAME = os.environ.get("DB_NAME","Cluster0")     
+DB_NAME = os.environ.get("DB_NAME","")     
 
 DB_URL = os.environ.get("DB_URL","")
  
