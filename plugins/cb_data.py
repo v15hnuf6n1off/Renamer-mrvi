@@ -30,7 +30,7 @@ async def doc(bot,update):
      type = update.data.split("_")[1]
      new_name = update.message.text
      new_filename = new_name.split(":-")[1]
-     file_path = f"downloads/{new_filename}"
+     file_path = f"{db}/downloads/{new_filename}"
      file = update.message.reply_to_message
      ms = await update.message.edit("𝚃𝚁𝚈𝙸𝙽𝙶 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳...")
      c_time = time.time()
@@ -39,9 +39,9 @@ async def doc(bot,update):
      except Exception as e:
      	await ms.edit(e)
      	return 
-     splitpath = path.split("downloads/")
+     splitpath = path.split("{db}/downloads/")
      dow_file_name = splitpath[1]
-     old_file_name =f"downloads/{dow_file_name}"
+     old_file_name =f"{db}/downloads/{dow_file_name}"
      os.rename(old_file_name,file_path)
      duration = 0
      try:
